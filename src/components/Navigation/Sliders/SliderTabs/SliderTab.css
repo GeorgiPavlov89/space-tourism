@@ -1,0 +1,15 @@
+.tab-list {
+  --gap: 2rem;
+}
+
+.sliderTab {
+  margin-top: 20vh;
+  --flow-space: 4rem;
+}
+
+.sliderTab button {
+  cursor: pointer;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}

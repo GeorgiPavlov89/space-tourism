@@ -1,0 +1,40 @@
+.primary-navigation {
+  --gap: 8rem;
+  list-style: none;
+  --underline-gap: 2rem;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+}
+
+.underline-indicators > * {
+  padding: var(--underline-gap, 1rem) 0;
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl(var(--clr-white) / 0.5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  color: hsl(var(--clr-white) / 1);
+  border-color: hsl(var(--clr-white) / 1);
+}
+.nav-link {
+  cursor: pointer;
+}
+.nav-link p {
+  text-decoration: none;
+}
+
+.nav-link p span {
+  font-weight: 700;
+  margin-right: 0.5em;
+}
