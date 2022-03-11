@@ -13,7 +13,7 @@
   --clr-white: 0 0% 100%;
 
   /* font-sizes */
-  --fs-900: 9.375rem;
+  --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 6.25rem;
   --fs-700: 3.5rem;
   --fs-600: 2rem;
@@ -30,7 +30,6 @@
 
 @media (min-width: 35em) {
   :root {
-    --fs-900: 9.375rem;
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
@@ -91,9 +90,17 @@ body {
   color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-dark));
   line-height: 1.5;
-  min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
+}
+html,
+body,
+#root,
+.App {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: bottom center;
 }
 
 /* make images easier to work with */
@@ -136,23 +143,38 @@ select {
   display: grid;
   gap: var(--gap, 1rem);
 }
-
+.d-block {
+  display: block;
+}
 .container {
   padding-inline: 2em;
   margin-inline: auto;
+  max-width: 80rem;
 }
 .grid-container {
   display: grid;
+  gap: 2rem;
+  text-align: center;
+  place-items: center;
+  padding-inline: 1rem;
 }
-
+.grid-container * {
+  max-width: 50ch;
+}
 @media (min-width: 45em) {
   .grid-container {
+    text-align: left;
     column-gap: var(--container-gap, 2rem);
     grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
         2rem,
         1fr
       );
   }
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
+
   .grid-container > *:first-child {
     grid-column: 2;
   }
@@ -160,11 +182,11 @@ select {
   .grid-container > *:last-child {
     grid-column: 3;
   }
-  .flow > *:where(:not(:first-child)) {
-    margin-top: var(--flow-space, 1rem);
-  }
 }
 
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
 .box {
   background: lightblue;
   padding: 3rem;
@@ -277,4 +299,10 @@ select {
 .underline-indicator > * {
   padding: var(--underline-gap, 1rem) 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+}
+
+@media (min-width: 35rem) {
+  .home {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+  }
 }
