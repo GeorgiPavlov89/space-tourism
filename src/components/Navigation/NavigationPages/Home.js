@@ -3,7 +3,7 @@ import LargeButton from "../../buttons/LargeButton"
 
 export default function Home() {
     return (
-        <div className="grid-container grid-container--home">
+        <main className="grid-container grid-container--home">
             <div>
                 <h1 className="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
                     <span className="d-block fs-900 ff-serif text-white">Space</span></h1>
@@ -14,6 +14,6 @@ export default function Home() {
 
             <LargeButton />
 
-        </div>
+        </main>
     )
 }

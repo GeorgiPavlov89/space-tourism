@@ -1,4 +1,10 @@
+nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
 .primary-navigation {
+  --gap: clamp(1.5rem, 5vw, 3.5rem);
   --underline-gap: 2rem;
   padding: 0;
   margin: 0;
@@ -6,6 +12,18 @@
 }
 .mobile-nav-toggle {
   display: none;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+.nav-link p {
+  text-decoration: none;
+}
+
+.nav-link p span {
+  font-weight: 700;
+  margin-right: 0.5em;
 }
 
 @supports (backdrop-filter: blur(1rem)) {
@@ -50,6 +68,38 @@
     border: 0;
   }
 }
+@media (min-width: 35em) {
+  .primary-navigation {
+    padding-inline: clamp(3rem, 5vw, 7rem);
+  }
+}
+
+@media (min-width: 35em) and (max-width: 44.999em) {
+  .primary-navigation {
+    padding-inline: 3rem;
+  }
+  .nav-link p span {
+    display: none;
+  }
+}
+
+@media (min-width: 45em) {
+  nav::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin-right: -2.5rem;
+    background: hsl(var(--clr-white) / 0.25);
+    order: 1;
+  }
+
+  .primary-navigation {
+    margin-block: 2rem;
+    order: 2;
+  }
+}
 
 .logo {
   margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
@@ -69,15 +119,4 @@
 .underline-indicators > [aria-selected="true"] {
   color: hsl(var(--clr-white) / 1);
   border-color: hsl(var(--clr-white) / 1);
-}
-.nav-link {
-  cursor: pointer;
-}
-.nav-link p {
-  text-decoration: none;
-}
-
-.nav-link p span {
-  font-weight: 700;
-  margin-right: 0.5em;
 }
