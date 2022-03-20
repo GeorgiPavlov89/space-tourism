@@ -56,13 +56,13 @@ nav {
     top: 2rem;
     background: transparent;
     border: 0;
-    background-image: url(../../assets/shared/icon-hamburger.svg);
+    background-image: url(../../shared/icon-hamburger.svg);
     background-repeat: no-repeat;
     width: 1.5rem;
     aspect-ratio: 1;
   }
   .mobile-nav-toggle.close {
-    background-image: url(../../assets/shared/icon-close.svg);
+    background-image: url(../../shared/icon-close.svg);
   }
   .primary-navigation.underline-indicators > .active {
     border: 0;

@@ -1,9 +1,10 @@
 import React from 'react'
-import LargeButton from "../../buttons/LargeButton"
+import LargeButton from "../../../buttons/LargeButton"
+import './Home.css'
 
 export default function Home() {
     return (
-        <main className="grid-container grid-container--home">
+        <main className="grid-container grid-container--home ">
             <div>
                 <h1 className="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">So, you want to travel to
                     <span className="d-block fs-900 ff-serif text-white">Space</span></h1>
