@@ -7,7 +7,7 @@ export default function LargeButton() {
     return (
 
         <div>
-            <Link to="space-tourism/destination" className="large-button uppercase ff-serif  text-dark bg-white">Explore</Link>
+            <Link to="destination" className="large-button uppercase ff-serif  text-dark bg-white">Explore</Link>
         </div>
 
 
