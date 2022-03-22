@@ -14,6 +14,8 @@ function App() {
 
   const path = useLocation().pathname;
   const location = path.split("/")[1]
+
+
   return (
     <div className={"App " + location}  >
 

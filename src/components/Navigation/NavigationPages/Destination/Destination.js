@@ -41,7 +41,7 @@ export default function Destination() {
 
 
             <div className=" sliderTab tab-list underline-indicators flex">
-                <button onClick={changeDestination} name="first" className={`uppercase ff-sans-cond text-accent bg-dark letter-spacing-2 ${active === "first" ? "activeTab" : ""}`}>Moon</button>
+                <button onClick={changeDestination} name="first" className={`uppercase ff-sans-cond text-accent bg-dark  letter-spacing-2 ${active === "first" ? "activeTab" : ""}`}>Moon</button>
                 <button onClick={changeDestination} name="second" className={`uppercase ff-sans-cond text-accent bg-dark letter-spacing-2 ${active === "second" ? "activeTab" : ""}`}>Mars</button>
                 <button onClick={changeDestination} name="third" className={`uppercase ff-sans-cond text-accent bg-dark letter-spacing-2 ${active === "third" ? "activeTab" : ""}`}>Europa</button>
                 <button onClick={changeDestination} name="fourth" className={`uppercase ff-sans-cond text-accent bg-dark letter-spacing-2 ${active === "fourth" ? "activeTab" : ""}`}>Titan</button>
@@ -50,7 +50,7 @@ export default function Destination() {
             <article className="destination-info flow">
                 <h2 className="fs-800 uppercase ff-serif">{destination.name}</h2>
 
-                <p>{destination.description}</p>
+                <p className="text-accent ff-sans-normal fs-400">{destination.description}</p>
 
 
                 <div className="destination-meta flex">

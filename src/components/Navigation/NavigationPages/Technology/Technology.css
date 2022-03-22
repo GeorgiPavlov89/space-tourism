@@ -1,0 +1,94 @@
+.grid-container--technology {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  padding-bottom: 5rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "numbers"
+    "content";
+}
+
+.number-indicators button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid hsl(var(--clr-white) / 0.25);
+  background-color: hsl(var(--clr-dark));
+  color: hsl(var(--clr-white));
+}
+.number-indicators button:hover,
+.number-indicators button:focus {
+  background-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-dark) / 1);
+}
+.grid-container--technology picture img {
+  width: 100%;
+  grid-area: image;
+}
+.number-indicators {
+  grid-area: numbers;
+}
+.numbered-title {
+  grid-area: title;
+}
+.technology-details {
+  grid-area: content;
+}
+.launch-image {
+  grid-area: image;
+}
+.technology-details {
+  width: 420px;
+  height: 220px;
+  text-align: center;
+}
+.number-indicators .active-number {
+  background-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-dark) / 1);
+}
+
+@media (min-width: 35em) {
+  .technology-details .teacnology-name {
+    font-size: var(--fs-700);
+  }
+  .grid-container--technology .numbered-title {
+    padding-left: 3rem;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 45em) {
+  .grid-container--technology {
+    row-gap: 6rem;
+    padding-bottom: 0;
+    grid-template-areas:
+      ". title title ."
+      ". numbers content image";
+  }
+
+  .number-indicators {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 2rem;
+  }
+  .number-indicators button {
+    width: 70px;
+    height: 70px;
+  }
+  .number-indicators button {
+    font-size: var(--fs-600);
+  }
+  .technology-details {
+    text-align: left;
+    width: 470px;
+    justify-self: start;
+  }
+  .launch-image {
+    justify-self: end;
+    padding-bottom: 4rem;
+  }
+}

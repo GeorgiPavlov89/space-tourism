@@ -3,7 +3,6 @@ import { useState } from 'react'
 import "./Crew.css"
 import Data from "../../../../data.json"
 
-
 export default function Crew() {
     const [crewMember, setCrewMember] = useState(Data.crew[0])
     const [active, setActive] = useState("first")
@@ -14,19 +13,19 @@ export default function Crew() {
         setActive(name)
 
 
-        if (e.target.id == 1) {
+        if (name === "first") {
 
             setCrewMember(Data.crew[0])
 
-        } else if (e.currentTarget.id == 2) {
+        } else if (name === "second") {
 
             setCrewMember(Data.crew[1])
 
-        } else if (e.currentTarget.id == 3) {
+        } else if (name === "third") {
 
             setCrewMember(Data.crew[2])
 
-        } else if (e.currentTarget.id == 4) {
+        } else if (name === "fourth") {
 
             setCrewMember(Data.crew[3])
 
@@ -45,7 +44,7 @@ export default function Crew() {
                         <h2 className="fs-600 ff-serif uppercase">{crewMember.role}</h2>
                         <p className="fs-700 uppercase ff-serif">{crewMember.name}</p>
                     </header>
-                    <p>{crewMember.bio}</p>
+                    <p className="text-accent ff-sans-normal fs-400">{crewMember.bio}</p>
                 </article>
 
                 <div className="dot-indicators flex">
@@ -56,10 +55,6 @@ export default function Crew() {
 
                 </div>
 
-
-                {/* <SliderDots
-                    changeCrew={changeCrew}
-                /> */}
                 <img src={crewMember.images.webp} alt="" />
             </main>
         </>
