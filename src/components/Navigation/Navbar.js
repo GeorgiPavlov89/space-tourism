@@ -14,10 +14,10 @@ export default function Navbar() {
     }
 
     const navClickActive = (e) => {
-        console.log(e.target);
+
         const { name } = e.currentTarget
         setActive(name)
-        console.log(setActive);
+
     }
     return (
         <nav className="flex">

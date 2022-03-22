@@ -13,7 +13,7 @@ import Navbar from "./components/Navigation/Navbar"
 function App() {
 
   const path = useLocation().pathname;
-  const location = path.split("/")[1]
+  const location = path.split("space-tourism/")[1]
 
 
   return (
