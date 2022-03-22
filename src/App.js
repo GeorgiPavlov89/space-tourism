@@ -26,10 +26,10 @@ function App() {
 
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
-        <Route path='/crew' element={<Crew />} />
-        <Route path='/Technology' element={<Technology />} />
+        <Route path="space-tourism/" element={<Home />} />
+        <Route path="space-tourism/destination" element={<Destination />} />
+        <Route path="space-tourism/crew" element={<Crew />} />
+        <Route path="space-tourism/Technology" element={<Technology />} />
       </Routes>
 
 
