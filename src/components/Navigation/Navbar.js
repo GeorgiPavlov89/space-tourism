@@ -28,27 +28,27 @@ export default function Navbar() {
 
             <div className={`primary-navigation ${navOpen ? "" : "show"}  underline-indicators flex`}>
 
-                <Link to="/" style={{ textDecoration: 'none' }} onClick={navClickActive} name="home" className={isActive === "home" ? "active" : ""}>
+                <Link to="/space-tourism" style={{ textDecoration: 'none' }} onClick={navClickActive} name="home" className={isActive === "home" ? "active" : ""}>
                     <div name="home" className="nav-link uppercase   text-white letter-spacing-2" >
                         <p onClick={navClickActive} name="home" className="ff-sans-cond uppercase text-white letter-spacing-2 "><span>00</span>Home</p>
                     </div>
                 </Link>
 
 
-                <Link to="/destination" style={{ textDecoration: 'none' }} onClick={navClickActive} name="destination" className={isActive === "destination" ? "active" : ""} >
+                <Link to="space-tourism/destination" style={{ textDecoration: 'none' }} onClick={navClickActive} name="destination" className={isActive === "destination" ? "active" : ""} >
                     <div name="destination" className="nav-link uppercase  text-white letter-spacing-2 " >
                         <p onClick={navClickActive} name="destination" className="ff-sans-cond uppercase text-white letter-spacing-2 "><span>01</span>Destination</p>
                     </div>
                 </Link>
 
 
-                <Link to="/crew" style={{ textDecoration: 'none' }} onClick={navClickActive} name="crew" className={isActive === "crew" ? "active" : ""}>
+                <Link to="space-tourism/crew" style={{ textDecoration: 'none' }} onClick={navClickActive} name="crew" className={isActive === "crew" ? "active" : ""}>
                     <div className="nav-link uppercase text-white letter-spacing-2 ">
                         <p onClick={navClickActive} name="crew" className="ff-sans-cond uppercase text-white letter-spacing-2 "><span>02</span>Crew</p>
                     </div>
                 </Link>
 
-                <Link to="/technology" style={{ textDecoration: 'none' }} onClick={navClickActive} name="technology" className={isActive === "technology" ? "active" : ""}>
+                <Link to="space-tourism/technology" style={{ textDecoration: 'none' }} onClick={navClickActive} name="technology" className={isActive === "technology" ? "active" : ""}>
                     <div className="nav-link uppercase text-white letter-spacing-2 ">
                         <p onClick={navClickActive} name="technology" className="ff-sans-cond uppercase text-white letter-spacing-2 "><span>03</span>Technology</p>
                     </div>
